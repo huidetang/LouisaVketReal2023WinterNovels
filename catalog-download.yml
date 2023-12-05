@@ -1,11 +1,11 @@
 PREDEF:
-  - preface.re
+  - dedication.re
 
 CHAPS:
-  - test.re
+  - are.re
+  - tsugaru.re
 
 APPENDIX:
 
 POSTDEF:
   - postscript.re
-  - bib.re
