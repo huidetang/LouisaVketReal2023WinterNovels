@@ -91,38 +91,38 @@ jobs:
       - name: Upload artifact.
         uses: actions/upload-artifact@v3
         with:
-          name: book.pdf
-          path: book.pdf
-  pdf-ebook:
-    # needs: reviewdog-github-check
-    name: Make PDF for Ebook
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/huideyeren/review-docker:main
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      - name: Install gems.
-        run: bundle install
-      - name: Copy plantuml.
-        run: cp /java/plantuml.jar .
-      - name: Check tools
-        run: dot -V && blockdiag --version && java -jar plantuml.jar -version
-      - name: convert PlantUML
-        run: pwd | bash ./plantuml.sh >> .plantuml.log
-      - name: Show .plantuml.log
-        run: cat .plantuml.log
-      - name: Convert SVG to PDF
-        run: pwd | python3 svg.py >> .svg.log
-      - name: Show .svg.log
-        run: cat .svg.log
-      - name: Build PDF.
-        run: REVIEW_CONFIG_FILE=config-ebook-pdf.yml REVIEW_CATALOG_FILE=catalog-download.yml bundle exec rake pdf
-      - name: Upload artifact.
-        uses: actions/upload-artifact@v3
-        with:
-          name: book.pdf
-          path: book.pdf
+          name: LouisaVketReal2023Winter.pdf
+          path: LouisaVketReal2023Winter.pdf
+  # pdf-ebook:
+  #   # needs: reviewdog-github-check
+  #   name: Make PDF for Ebook
+  #   runs-on: ubuntu-latest
+  #   container:
+  #     image: ghcr.io/huideyeren/review-docker:main
+  #   steps:
+  #     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+  #     - uses: actions/checkout@v3
+  #     - name: Install gems.
+  #       run: bundle install
+  #     - name: Copy plantuml.
+  #       run: cp /java/plantuml.jar .
+  #     - name: Check tools
+  #       run: dot -V && blockdiag --version && java -jar plantuml.jar -version
+  #     - name: convert PlantUML
+  #       run: pwd | bash ./plantuml.sh >> .plantuml.log
+  #     - name: Show .plantuml.log
+  #       run: cat .plantuml.log
+  #     - name: Convert SVG to PDF
+  #       run: pwd | python3 svg.py >> .svg.log
+  #     - name: Show .svg.log
+  #       run: cat .svg.log
+  #     - name: Build PDF.
+  #       run: REVIEW_CONFIG_FILE=config-ebook-pdf.yml REVIEW_CATALOG_FILE=catalog-download.yml bundle exec rake pdf
+  #     - name: Upload artifact.
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: book.pdf
+  #         path: book.pdf
   epub:
     # needs: reviewdog-github-check
     name: Make EPUB
@@ -147,5 +147,5 @@ jobs:
       - name: Upload artifact.
         uses: actions/upload-artifact@v3
         with:
-          name: book.epub
-          path: book.epub
+          name: LouisaVketReal2023Winter.epub
+          path: LouisaVketReal2023Winter.epub

@@ -1,4 +1,4 @@
 inherit: ["config.yml"]
-# bookname: louisa-works-2023-2-print
+bookname: LouisaVketReal2023Winter
 # prt: ねこのしっぽ
-texdocumentclass: ["review-jlreq", "media=print,paper=b5,fontsize=9pt,serial_pagination=true,hiddenfolio=shippo,startpage=3,tate,twoside,onecolumn,openany"]
+texdocumentclass: ["review-jlreq", "media=ebook,paper=b5,fontsize=8pt,serial_pagination=true,hiddenfolio=shippo,startpage=2,tate,twoside,twocolumn,openany"]
